@@ -1,28 +1,23 @@
-# Glass New Tab
+# Glassy New Tab ✨
 
-A Chrome/Chromium Manifest V3 extension that replaces the new tab page.
+A beautiful, customizable, and lightweight New Tab page for Google Chrome featuring a glassmorphism design. Personalize your browsing experience with custom backgrounds, customizable quick links, and a sleek animated digital clock.
 
-## Features
-- Glassmorphism panels and controls
-- Optional sharp, unblurred background image (stored locally in browser storage; maximum 5 MB)
-- Time-aware greeting (Good morning / afternoon / evening) with an editable name
-- Clock remains centred independently of the 12H/24H toggle
-- Animated split-flap-inspired clock with a horizontal centre line
-- 12/24-hour toggle and three clock sizes
-- Up to six editable favourite website cards
-- Centre layout or clock-left / favourites-right layout
-- Favourite site: click to open, right-click to edit
 
-## Install in Chrome
-1. Extract `glass_newtab_extension.zip`.
-2. Open `chrome://extensions`.
-3. Turn on **Developer mode**.
-4. Choose **Load unpacked**.
-5. Select the extracted `glass_newtab_extension` folder.
-6. Open a new tab. If another extension already overrides the new tab page, disable that extension.
+## 🌟 Features
 
-## Notes
-- This project uses only local extension storage. It does not collect or send your settings anywhere.
-- Favicons are requested from Google's favicon service; site links open the URLs you save.
-- To change the default six sites, edit `DEFAULT_SITES` in `newtab.js`.
-- The clock animation is a CSS flip transition, not a video or external font.
+* **Glassmorphism UI:** Clean, modern, frosted-glass design that blends seamlessly with any background.
+* **Animated Digital Clock:** Beautiful flip-animation digits. Toggle easily between 12-hour and 24-hour formats.
+* **Personalized Greeting:** Welcomes you with a time-based greeting (Good morning/afternoon/evening) and your name.
+* **Unlimited Quick Links:** Add, edit, and remove as many favorite websites as you want.
+* **Automatic Favicons:** Automatically fetches high-quality icons for your saved websites.
+* **Highly Customizable:**
+  * Upload your own custom background image.
+  * Change the layout alignment (Centered or Split-screen).
+  * Adjust the size of the Clock and the Favorites grid (Small, Medium, Large).
+* **Privacy First:** All settings and background images are saved locally in your browser using Chrome Local Storage. No data is sent to external servers.
+
+## 🚀 Installation
+
+Since this extension is in development, you can easily install it locally on your browser:
+
+
