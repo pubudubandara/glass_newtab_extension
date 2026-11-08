@@ -1,0 +1,8 @@
+{
+  "manifest_version": 3,
+  "name": "Glass New Tab",
+  "version": "1.0.0",
+  "description": "A glass-style new tab with an animated flip clock and six favourite sites.",
+  "chrome_url_overrides": { "newtab": "newtab.html" },
+  "permissions": ["storage"]
+}

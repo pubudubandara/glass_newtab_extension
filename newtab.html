@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>New Tab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="backdrop" id="backdrop"></div>
+  <button class="settings-button glass" id="openSettings" aria-label="Settings" title="Settings">⚙</button>
+
+  <main id="layout" class="layout align-center">
+    <section class="clock-area">
+      <div id="greeting" class="greeting"></div>
+      <div id="date" class="date"></div>
+      <div class="clock-row">
+        <div id="clock" class="clock size-medium" aria-label="Current time"></div>
+        <button id="formatToggle" class="format-toggle glass" title="Switch 12/24 hour format">12H</button>
+      </div>
+    </section>
+
+    <section class="favorites-area">
+      <div class="favorites-heading">FAVOURITES</div>
+      <div id="favorites" class="favorites-grid size-medium"></div>
+    </section>
+  </main>
+
+  <!-- Main Settings Dialog -->
+  <dialog id="settingsDialog" class="settings-dialog glass">
+    <form method="dialog" class="dialog-head">
+      <h2>Personalize</h2>
+      <button class="close-button" aria-label="Close">×</button>
+    </form>
+    <div class="settings-content">
+      <label class="setting-label">Clock size
+        <div class="segmented" id="sizeOptions">
+          <button type="button" data-size="small">Small</button>
+          <button type="button" data-size="medium">Medium</button>
+          <button type="button" data-size="large">Large</button>
+        </div>
+      </label>
+      
+      <!-- NEW: Favorites Size Option -->
+      <label class="setting-label">Favorites size
+        <div class="segmented" id="favSizeOptions">
+          <button type="button" data-size="small">Small</button>
+          <button type="button" data-size="medium">Medium</button>
+          <button type="button" data-size="large">Large</button>
+        </div>
+      </label>
+
+      <label class="setting-label">Layout alignment
+        <select id="alignment">
+          <option value="center">Everything centred</option>
+          <option value="split">Clock left · favourites right</option>
+        </select>
+      </label>
+      <label class="setting-label">Greeting name
+        <input id="greetingName" type="text" maxlength="30" placeholder="Your name">
+      </label>
+      <label class="setting-label">Background image
+        <input id="backgroundFile" type="file" accept="image/*">
+      </label>
+      <button type="button" class="subtle-button" id="clearBackground">Remove background image</button>
+      <p class="hint">Your settings and favourite sites are saved in this browser. Right-click a favourite to edit or remove it.</p>
+    </div>
+  </dialog>
+
+  <!-- Add/Edit Site Dialog -->
+  <dialog id="siteDialog" class="settings-dialog glass">
+    <form method="dialog" class="dialog-head">
+      <h2 id="siteDialogTitle">Add favourite</h2>
+      <button class="close-button" aria-label="Close">×</button>
+    </form>
+    <form id="siteForm" class="settings-content">
+      <input type="hidden" id="siteId">
+      <label class="setting-label">Site name<input id="siteName" maxlength="24" placeholder="YouTube" required></label>
+      <label class="setting-label">Website URL<input id="siteUrl" type="url" placeholder="https://www.youtube.com" required></label>
+      <div class="form-actions">
+        <button type="button" class="subtle-button" id="deleteSite">Remove</button>
+        <button type="submit" class="save-button">Save site</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="newtab.js"></script>
+</body>
+</html>
